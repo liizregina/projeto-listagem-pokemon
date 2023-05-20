@@ -1,0 +1,123 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    max-width: 1280px;
+    margin: 0 auto;
+    background-color: #5e5b5bad;
+    color: #333333;
+}
+
+body.modo-escuro{
+    background-color: #212121;
+    color: #f5f5f5;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+header .logo,
+header .imagem-botao{
+    width: 30px;
+    transition: 0.2s ease-in-out;
+}
+
+header #botao-alterar-tema{
+    background: none;
+    border: none;
+}
+
+header .logo:hover,
+header .imagem-botao:hover{
+    transform: scale(1.05);   /* Muda o tamanho da logo quando passo o mouse */
+    cursor: pointer;
+}
+
+main{
+    padding: 25px;
+}
+
+main .listagem-pokemon{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;  /* Espaçamento entre os cartões */
+    justify-content: center; /*Centralizou os itens dentro do div */
+}
+
+main .cartao-pokemon{
+    background-color: #d8e3ec;
+    width: 200px;
+    padding: 15px; /* Espaçar texto da borda do cartão */
+    display: flex; /* Coloca os itens um do lado do outro */
+    flex-direction: column; /*Arruma para que os itens fiquem um embaixo do outro */
+    align-items: center; /* Centraliza e alinha os itens */
+    gap: 15px; /* Espaçamento entre os elementos do cartão */
+    border-radius: 15px; /*Colocar a borda arredondada */
+    transition: 0.2s ease-in-out; /*Precisa colocar para quando passar o mouse no card, ele aumentar */
+}
+
+main .cartao-pokemon:hover{
+    background-color: #96d9d6; /* Passo o mouse no card, e ele fica azul, pelo hover */
+    transform: scale(1.05); 
+
+}
+
+.modo-escuro .cartao-pokemon{
+    background-color: #a8a8a8;
+}
+
+main .cartao-pokemon .informacoes{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #333333;
+    border-radius: 10px;
+}
+
+main .cartao-pokemon .informacoes span{
+    padding: 5px;
+    text-transform: uppercase; /*transforma o texto em caixa alta */
+    font-size: 17px;
+}
+
+main .cartao-pokemon .gif{
+    width: 90px;
+    height: 90px;
+}
+
+main .cartao-pokemon .tipos{
+    display: flex;
+    gap: 15px;
+}
+
+main .cartao-pokemon .tipo{
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.grama {
+    background-color: #7ac74c;
+}
+
+.veneno{
+    background-color: #df67ddfb;
+}
+
+.fogo{
+    background-color: #ee8130;
+}
+
+.agua{
+    background-color: #6390f0;
+}
+
+.inseto{
+    background-color: #a6b91a;
+}
+
+main .descricao{
+    max-height: 80px; /*Tamanho maximo do card */
+    overflow-y: scroll; /*Contém o texto dentro do card, e adiciona um scroll para ver a informação */
+    font-size: 14px;
+    padding-right: 10px; /*espaça da direita para não grudar na bala de rolagem */
+}
